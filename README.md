@@ -1,6 +1,3 @@
-Certainly! Here's an expanded version of the README file for your e-menu project:
-
-```
 # React E-Menu
 
 React E-Menu is a web application that serves as an electronic menu for restaurants, cafes, or any food establishment. It allows customers to browse through available dishes and their details, facilitating a seamless ordering experience.

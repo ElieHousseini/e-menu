@@ -1,9 +1,6 @@
-Certainly! Here's an expanded version of the README file for your e-menu project:
+# E-Menu
 
-```
-# React E-Menu
-
-React E-Menu is a web application that serves as an electronic menu for restaurants, cafes, or any food establishment. It allows customers to browse through available dishes and their details, facilitating a seamless ordering experience.
+E-Menu is a web application that serves as an electronic menu for restaurants, cafes, or any food establishment. It allows customers to browse through available dishes and their details, facilitating a seamless ordering experience.
 
 The project is built with React for the frontend and utilizes Strapi as the headless CMS for managing and delivering the menu data.
 
@@ -38,16 +35,6 @@ The project is built with React for the frontend and utilizes Strapi as the head
 - **Efficient Data Fetching:** Use Axios to retrieve menu data from the Strapi backend API.
 - **Type Safety:** Leverage TypeScript to enforce strong typing and enhance code quality.
 - **Scalable Architecture:** Structure the project in a modular and maintainable manner to accommodate future expansion and feature additions.
-
-## Project Structure
-
-- `src/` - Contains the source code files for the React frontend.
-  - `components/` - Reusable UI components used throughout the application.
-  - `pages/` - Top-level page components representing different sections of the application.
-  - `services/` - API service modules responsible for fetching data from the Strapi backend.
-  - `utils/` - Utility functions and helper modules.
-- `public/` - Contains public assets such as images and static files.
-- `strapi/` - Contains the Strapi backend configuration and code.
 
 ## Available Scripts
 

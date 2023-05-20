@@ -1,6 +1,6 @@
-# React E-Menu
+# E-Menu
 
-React E-Menu is a web application that serves as an electronic menu for restaurants, cafes, or any food establishment. It allows customers to browse through available dishes and their details, facilitating a seamless ordering experience.
+E-Menu is a web application that serves as an electronic menu for restaurants, cafes, or any food establishment. It allows customers to browse through available dishes and their details, facilitating a seamless ordering experience.
 
 The project is built with React for the frontend and utilizes Strapi as the headless CMS for managing and delivering the menu data.
 

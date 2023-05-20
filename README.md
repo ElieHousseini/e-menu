@@ -36,16 +36,6 @@ The project is built with React for the frontend and utilizes Strapi as the head
 - **Type Safety:** Leverage TypeScript to enforce strong typing and enhance code quality.
 - **Scalable Architecture:** Structure the project in a modular and maintainable manner to accommodate future expansion and feature additions.
 
-## Project Structure
-
-- `src/` - Contains the source code files for the React frontend.
-  - `components/` - Reusable UI components used throughout the application.
-  - `pages/` - Top-level page components representing different sections of the application.
-  - `services/` - API service modules responsible for fetching data from the Strapi backend.
-  - `utils/` - Utility functions and helper modules.
-- `public/` - Contains public assets such as images and static files.
-- `strapi/` - Contains the Strapi backend configuration and code.
-
 ## Available Scripts
 
 - `npm run dev` - Start the development server.

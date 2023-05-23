@@ -1,11 +1,11 @@
 // fetchData.ts
-import { MenuItemType } from '../types';
+import { MenuCategoryType } from '../types';
 
 type FetchDataArgs = {
   url: string;
 };
 
-const fetchData = ({ url }: FetchDataArgs): Promise<MenuItemType[]> => {
+const fetchData = ({ url }: FetchDataArgs): Promise<MenuCategoryType[]> => {
   return fetch(url).then((response) => response.json());
 };
 

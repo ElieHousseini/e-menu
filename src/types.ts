@@ -2,10 +2,19 @@ export type MenuItemType = {
     name: string;
     price: string;
     description: string;
-    category: string,
+    category: string;
+    image: {
+        url: string;
+    }
+}
+
+type CategoryImage = {
+    url: string
 }
 
 export type MenuCategoryType = {
-    category: string;
-    menuData: MenuItemType[];
+    id: number,
+    name: string,
+    name_ru:string;
+    image: CategoryImage[]
 }

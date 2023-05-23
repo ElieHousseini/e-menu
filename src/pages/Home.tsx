@@ -1,10 +1,11 @@
-import Menu from '../components/Menu/Menu'
+import Layout from '../Layout/Layout';
+import Menu from '../components/Menu/Menu/Menu'
 
 const Home = () => {
     return (
-        <div className="App">
+        <Layout>
             <Menu />
-        </div>
+        </Layout>
     );
 }
 

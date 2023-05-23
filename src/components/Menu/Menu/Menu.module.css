@@ -1,0 +1,121 @@
+.header {
+  position: relative;
+  overflow: hidden;
+  height: 162px;
+}
+
+.title{
+  font-weight: 400;
+}
+
+.location, .phone, .wifiPassword {
+  font-weight: 100;
+  color: grey;
+}
+
+.elementsContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.headerImage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: 50%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  z-index: -1;
+}
+
+.layout {
+  background-color: white;
+  padding: 1.5rem 1rem 0rem 1rem;
+  border-radius: 2rem;
+  margin-top: -2rem;
+  z-index: 1;
+  position: relative;
+}
+
+.main_contact {
+  margin: 0.8rem 0rem 0.8rem 0rem;
+  line-height: 1.5rem;
+}
+
+.toggleMenu {
+  display: inline-block;
+  padding: 0.28rem 0.7rem;
+  font-size: 1rem;
+  border: 3px solid #f7906c;
+  color: #f7906c;
+  background-color: white;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 3.125rem;
+  transition-duration: 0.4s;
+}
+
+.toggleMenu:first-child {
+  margin-right: 0.5rem;
+}
+
+.toggleMenu.active {
+  background-color: #f7906c;
+  color: white;
+}
+
+.toggleMenu:hover {
+  background-color: #f7906c;
+  color: white;
+}
+
+.searchBar {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.searchInputGroup {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  margin: 0.8rem 0rem 0.8rem 0rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.searchInput {
+  flex-grow: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.searchInput:focus {
+  outline: none;
+}
+
+.searchButton {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  color: white;
+  cursor: pointer;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.footer {
+  text-align: center;
+  margin-bottom: 1rem;
+}

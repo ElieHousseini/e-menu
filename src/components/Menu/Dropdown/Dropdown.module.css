@@ -1,0 +1,8 @@
+.dropdown {
+    position: absolute;
+    bottom: 2.5rem;
+    right: 1rem;
+    padding:  .2rem .4rem .2rem .4rem;
+    font-size: medium;
+    border-radius: .5rem;
+}

@@ -1,5 +1,11 @@
+import Menu from '../components/Menu/Menu'
+
 const Home = () => {
-    return <div>home</div>
+    return (
+        <div className="App">
+            <Menu />
+        </div>
+    );
 }
 
 export default Home

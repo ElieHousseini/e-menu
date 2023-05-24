@@ -15,6 +15,8 @@ type LanguageOption = {
 const Menu = () => {
   const FETCH_CATEGORIES_URL = import.meta.env.VITE_FETCH_CATEGORIES_URL;
   const BASE_URL = import.meta.env.VITE_BASE_URL;
+  const FETCH_CATEGORIES_BAR_URL = import.meta.env
+    .VITE_FETCH_CATEGORIES_BAR_URL;
   const { i18n, t } = useTranslation();
 
   const [categoriesData, setCategoriesData] = useState<MenuCategoryType[]>([]);
@@ -29,10 +31,14 @@ const Menu = () => {
   const defaultLanguageOption = languageOptions[0];
 
   useEffect(() => {
-    fetchData({ url: FETCH_CATEGORIES_URL as string }).then((data) => {
+    fetchData({
+      url: toggleBtn
+        ? FETCH_CATEGORIES_BAR_URL
+        : (FETCH_CATEGORIES_URL as string),
+    }).then((data) => {
       setCategoriesData(data);
     });
-  }, [FETCH_CATEGORIES_URL]);
+  }, [FETCH_CATEGORIES_URL, toggleBtn]);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
     setSearchTerm(event.target.value);
@@ -178,14 +184,23 @@ const Menu = () => {
         <div className={styles.main}>
           <h1 className={styles.title}>{t("restaurant_name")}</h1>
           <div className={styles.main_contact}>
-            <span className={`${styles.location} ${styles.elementsContainer}`}>
+            <a
+              href="https://www.google.com/maps/place/Beirut"
+              target="_blank"
+              title="location on google maps"
+              rel="noreferrer"
+              className={`${styles.location} ${styles.elementsContainer}`}
+            >
               <LocationIconImage />
               {t("location")}
-            </span>
-            <span className={`${styles.phone} ${styles.elementsContainer}`}>
+            </a>
+            <a
+              href={`tel:${t("phone")}`}
+              className={`${styles.phone} ${styles.elementsContainer}`}
+            >
               <PhoneImageSVG />
               {t("phone")}
-            </span>
+            </a>
             <span
               className={`${styles.wifiPassword} ${styles.elementsContainer}`}
             >
@@ -226,10 +241,10 @@ const Menu = () => {
                 </div>
               </div>
             </form>
+            {categoriesData?.map((category) => (
+              <MenuCategory key={category.id} category={category} />
+            ))}
           </div>
-          {categoriesData?.map((category) => (
-            <MenuCategory key={category.id} category={category} />
-          ))}
         </div>
         <div className={styles.footer}>
           <p>{t("thank_you_for_visiting_us")}</p>

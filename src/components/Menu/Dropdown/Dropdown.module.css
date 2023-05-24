@@ -5,4 +5,5 @@
     padding:  .2rem .4rem .2rem .4rem;
     font-size: medium;
     border-radius: .5rem;
+    cursor: pointer;
 }

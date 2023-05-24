@@ -15,6 +15,5 @@ type CategoryImage = {
 export type MenuCategoryType = {
     id: number,
     name: string,
-    name_ru:string;
     image: CategoryImage[]
 }

@@ -7,5 +7,27 @@
     "search_for_dishes": "Search for Dishes...",
     "submit": "submit",
     "thank_you_for_visiting_us": "Thank you for visiting us!",
-    "bar": "Bar"
+    "category": {
+        "dessert": "Desert",
+        "hot_meal": "Hot Meal",
+        "salad": "Salad",
+        "breakfast": "Breakfast",
+        "beer": "Beer",
+        "cocktail": "Cocktail",
+        "wine": "Wine",
+        "non_alcoholic": "Non Alcoholic"
+    },
+    "bar": "Bar",
+    "food": {
+        "steak_ma3_batata": {
+            "name": "Steak Ma3 Batata",
+            "description": "aasd asda sd asda sd"
+        },
+        "baba_ghannouj": {
+            "name": "Baba Ghannouj",
+            "description": "aasd asda sd asda sd"
+        }
+    },
+    "loading": "Loading...",
+    "no_items_found": "No Items Found"
 }

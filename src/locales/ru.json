@@ -7,5 +7,27 @@
     "search_for_dishes": "поиск блюд...",
     "submit": "отправлять",
     "thank_you_for_visiting_us": "Спасибо за то, что посетили нас!",
-    "bar": "бар"
+    "bar": "бар",
+    "category": {
+        "dessert": "десерт",
+        "hot_meal": "горячая еда",
+        "salad": "салат",
+        "breakfast": "завтрак",
+        "beer": "пиво",
+        "cocktail": "коктейль",
+        "wine": "вино",
+        "non_alcoholic": "безалкогольный"
+    }, 
+    "food": {
+        "steak_ma3_batata": {
+            "name": "стейк с картофелем",
+            "description": "асд асдасд асд"
+        },
+        "baba_ghannouj": {
+            "name": "Баба гануш",
+            "description": "асд асдасд асд"
+        }
+    },
+    "loading": "загрузка...",
+    "no_items_found": "ничего не найдено"
 }

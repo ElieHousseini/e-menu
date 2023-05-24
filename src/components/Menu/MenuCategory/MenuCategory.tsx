@@ -1,7 +1,7 @@
 import { MenuCategoryType } from "../../../types";
 import styles from "./MenuCategory.module.css";
-import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 type MenuCategoryTypeProps = {
   category: MenuCategoryType;
@@ -9,8 +9,8 @@ type MenuCategoryTypeProps = {
 
 const MenuCategory = ({ category }: MenuCategoryTypeProps) => {
   const BASE_URL = import.meta.env.VITE_BASE_URL;
-  const { i18n } = useTranslation();
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const handleClick = () => {
     navigate("/dishes", { state: { item: category.name } });
@@ -25,7 +25,7 @@ const MenuCategory = ({ category }: MenuCategoryTypeProps) => {
           className={styles.backgroundImage}
         />
         <div className={styles.centeredText}>
-          {i18n.language === "en" ? category.name : category.name_ru}
+          {t(`category.${category.name}`)}
         </div>
       </div>
     </div>

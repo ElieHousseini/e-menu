@@ -5,6 +5,7 @@ import fetchData from "../../../services/fetch";
 import ModalImage from "react-modal-image";
 import BackButton from "../BackButton/BackButton.tsx";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 type Item = {
   id: number;
@@ -29,6 +30,9 @@ const ItemsList = () => {
 
   const FETCH_DISHES_URL = import.meta.env.VITE_FETCH_DISHES_URL;
   const [items, setItems] = useState<Item[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true); // Add loading state
+
+  const { t } = useTranslation();
 
   const filterByCategory = (items: Item[], category: string): Item[] => {
     return items.filter(
@@ -37,11 +41,14 @@ const ItemsList = () => {
   };
 
   useEffect(() => {
+    setIsLoading(true)
     fetchData({
       url: FETCH_DISHES_URL,
     }).then((data: Item[]) => {
       const filteredItems = filterByCategory(data, item);
       setItems(filteredItems);
+    }).finally(() => {
+      setIsLoading(false)
     });
   }, [FETCH_DISHES_URL]);
 
@@ -51,10 +58,17 @@ const ItemsList = () => {
     navigate(-1);
   };
 
+  if (isLoading) {
+    return  <div className={styles.loading}>{t("loading")}</div>
+  }
+
   return (
     <div>
       <BackButton goBack={handleGoBack} />
-      <h2 className={styles.title}>{item}</h2>
+      <h2 className={styles.title}>{t(`${item}`)}</h2>
+      {items.length === 0 && (
+        <div className={styles.no_items_found}>{t("no_items_found")}</div>
+      )}
       {items.map((item: Item) => (
         <div className={styles.parent} key={item.id}>
           {item.image.length > 0 && (
@@ -70,10 +84,10 @@ const ItemsList = () => {
             </div>
           )}
           <div className={styles.nameWeight}>
-            <p className={styles.name}>{item.name}</p>
+            <p className={styles.name}>{t(`food.${item.name}.name`)}</p>
             <p className={styles.weight}>{item.weight}g</p>
           </div>
-          <p className={styles.description}>{item.description}</p>
+          <p className={styles.description}>{t(`food.${item.name}.description`)}</p>
           <p className={styles.price}>{item.price}$</p>
         </div>
       ))}

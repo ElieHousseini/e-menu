@@ -47,3 +47,18 @@
 .image_parent{
   cursor: pointer;
 }
+
+.no_items_found{
+  text-align: center;
+  background-color: lightgrey;
+  margin: 2rem 1rem 2rem 1rem;
+  padding: 2rem 1rem 2rem 1rem;
+  border-radius: 1rem;
+}
+
+.loading{
+  text-align: center;
+  margin: 2rem 1rem 2rem 1rem;
+  padding: 2rem 1rem 2rem 1rem;
+  border-radius: 1rem;
+}

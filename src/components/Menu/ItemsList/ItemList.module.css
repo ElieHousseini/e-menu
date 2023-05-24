@@ -1,0 +1,49 @@
+.parent{
+    margin-bottom: 2rem;
+}
+
+.title {
+  margin: 1rem 0 1rem 0;
+  text-transform: uppercase;
+  font-size: 1.333rem;
+  font-weight: 400;
+  color: grey;
+}
+
+.nameWeight {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+.name {
+  font-size: 1rem;
+  font-weight: 600;
+  display: inline;
+}
+
+.weight {
+  color: #989898;
+  font-size: 0.9rem;
+  display: inline;
+}
+
+.description {
+  margin-bottom: 0.5rem;
+  color: #676767;
+  font-size: 14px;
+}
+
+.price{
+    margin-bottom: .5rem;
+    color: orange
+}
+
+.image{
+    border-radius: 1rem;
+}
+
+.image_parent{
+  cursor: pointer;
+}
